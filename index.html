@@ -4154,7 +4154,7 @@ const ANIMS=[
   {id:'ninguna',name:'Sin animaciones',desc:'Todo aparece al instante.'}
 ];
 function animPreview(){
-  const ppl=['sofi','diego','vale'].map(id=>S.users[id]);
+  const ppl=[{name:'Sofi',color:'#D9488F'},{name:'Diego',color:'#4F8CFF'},{name:'Vale',color:'#2FA37A'}]; /* sample people: the real app has no demo users */
   const txt=['¿Ya vieron el nuevo tema?','Se ve increíble 🔥','¡Pruébenlo en Liquid Glass!'];
   return `<div class="anim-prev" id="animPrev"><div class="ambient" aria-hidden="true">${blobsHtml()}</div>
     <div class="rail" aria-hidden="true">${iconSvg(S.prefs.icon,48).replace('<svg','<svg class="rail-btn home" style="border-radius:16px"')}<div class="rail-sep"></div>${S.servers.slice(0,2).map(s=>`<span class="rail-btn" style="background:${esc(s.color)}33">${initial(s.name)}</span>`).join('')}</div>
